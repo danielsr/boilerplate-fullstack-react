@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb-base"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "rules": {
+    "linebreak-style": "off",
+    "no-unused-vars": "off",
+    "no-undef": "off",
+    "semi": [
+      "error",
+      "never"
+    ],
+    "no-tabs": "off",
+    "consistent-return": "off",
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "class-methods-use-this": "off"
+  },
+  "settings": {
+    "import/resolver": "webpack"
+  }
+}
