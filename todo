@@ -2,10 +2,10 @@
 [x] Reactstrap
 [x] Remove Styled Components
 [x] Setup Prettier with ESLint
+[x] Fix Routes
 [ ] Login Page
 [ ] API Setup (server)
 [ ] Remove page scroll (check Footer)
-[ ] Wrapp NavBar with Reactstrap
+[ ] NavBar with Reactstrap
 [ ] Modal components and util folder with webpack
-[ ] Code refactor Routes
 [ ] Build setup
