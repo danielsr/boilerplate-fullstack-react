@@ -1,0 +1,11 @@
+[x] Setup Unit test
+[x] Reactstrap
+[x] Remove Styled Components
+[x] Setup Prettier with ESLint
+[ ] Login Page
+[ ] API Setup (server)
+[ ] Remove page scroll (check Footer)
+[ ] Wrapp NavBar with Reactstrap
+[ ] Modal components and util folder with webpack
+[ ] Code refactor Routes
+[ ] Build setup
