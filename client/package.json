@@ -7,7 +7,7 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --config ./webpack.config.js",
+    "start": "webpack-dev-server --history-api-fallback --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js -p",
     "test": "jest /src",
     "test-watch": "jest /src --watch"
@@ -16,7 +16,7 @@
     "presets": ["env", "react", "stage-2"]
   },
   "jest": {
-    "setupFiles": ["./src/test/setup.js"],
+    "setupFiles": ["./src/core/test/setup.js"],
     "snapshotSerializers": ["enzyme-to-json/serializer"]
   },
   "devDependencies": {
@@ -51,6 +51,7 @@
     "bootstrap": "^4.0.0",
     "history": "^4.7.2",
     "moment": "^2.20.1",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
