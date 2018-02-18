@@ -1,9 +1,8 @@
+const path = require('path')
+
 module.exports = {
   entry: {
-    app: [
-      'regenerator-runtime/runtime',
-      './src/index.js'
-    ]
+    app: ['regenerator-runtime/runtime', './src/index.js']
   },
   output: {
     path: `${__dirname}/public`,
@@ -11,7 +10,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   module: {
-    rules: [
+    loaders: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
@@ -24,6 +23,11 @@ module.exports = {
     ]
   },
   resolve: {
+    alias: {
+      core: path.resolve(__dirname, 'src', 'core'),
+      state: path.resolve(__dirname, 'src', 'state')
+    },
+    modules: [path.resolve(__dirname, 'node_modules')],
     extensions: ['*', '.js', '.jsx']
   },
   devServer: {

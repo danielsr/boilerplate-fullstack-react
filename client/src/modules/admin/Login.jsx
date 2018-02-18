@@ -1,10 +1,20 @@
 import React, { Component } from 'react'
-import { Modal } from '../../core/components'
+import { reduxForm } from 'redux-form'
+import { Modal, Input } from 'core/components'
 
 class Login extends Component {
   render() {
-    return <div>Login</div>
+    return (
+      <Modal title="Login">
+        <div className="row">
+          <div className="col-md">
+            <Input name="email" label="E-mail" />
+            <Input name="pwd" label="Senha" />
+          </div>
+        </div>
+      </Modal>
+    )
   }
 }
 
-export default Login
+export default reduxForm({ form: 'login' })(Login)

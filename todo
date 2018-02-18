@@ -1,11 +1,12 @@
-[x] Setup Unit test
-[x] Reactstrap
-[x] Remove Styled Components
-[x] Setup Prettier with ESLint
-[x] Fix Routes
-[ ] Login Page
-[ ] API Setup (server)
+[ ] Routes structure
+[ ] Store structure
+[ ] Modules structure
+[ ] Core structure
 [ ] Remove page scroll (check Footer)
 [ ] NavBar with Reactstrap
-[ ] Modal components and util folder with webpack
 [ ] Build setup
+[ ] Recompose
+[ ] Lodash
+[ ] Custom Modal sizes and options
+
+[ ] API Setup (server)

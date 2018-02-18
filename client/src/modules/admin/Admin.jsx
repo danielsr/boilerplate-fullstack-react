@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { NavBar, Footer } from '../../core/components'
+import { NavBar, Footer } from 'core/components'
 
 class Admin extends Component {
   render() {

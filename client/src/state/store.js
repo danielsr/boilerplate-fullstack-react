@@ -11,6 +11,12 @@ export const history = createHistory()
 
 const routeMiddleware = routerMiddleware(history)
 
-export const store = createStore(reducers, applyMiddleware(sagaMiddleware, routeMiddleware))
+/* eslint-disable no-underscore-dangle */
+export const store = createStore(
+  reducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(sagaMiddleware, routeMiddleware)
+)
+/* eslint-enable */
 
 sagaMiddleware.run(rootSaga)
