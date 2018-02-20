@@ -14,8 +14,8 @@ class Routes extends Component {
         <ConnectedRouter history={history}>
           <div>
             <Route path="/login" component={Login} />
-            <PrivateRoute exact path="/" component={Main} />
-            <PrivateRoute exact path="/admin" component={Main} />
+            <Route exact path="/" component={Main} />
+            <Route exact path="/admin" component={Main} />
           </div>
         </ConnectedRouter>
       </Provider>
