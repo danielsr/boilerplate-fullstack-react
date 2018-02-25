@@ -58,8 +58,6 @@ class Main extends Component {
   onDragDrop(result) {
     if (!result.source || !result.destination) return
 
-    console.log(result)
-
     const srcId = result.source.droppableId
     const destId = result.destination.droppableId
     const src = this.state[srcId]
@@ -86,7 +84,7 @@ class Main extends Component {
                 <DropArea
                   id="items"
                   items={this.state.items}
-                  renderItem={this.renderItemLayout}
+                  renderItem={this.renderItem}
                   renderPlaceHolder={this.renderPlaceHolder}
                   gridSize={1}
                 />
@@ -103,21 +101,21 @@ class Main extends Component {
             </div>
           </div>
         </DragDrop>
-        <h1 className="mt-4">Sortable</h1>
-        <hr />
-        <Sortable
-          id="items3"
-          items={this.state.items3}
-          renderItem={this.renderItemLayout}
-          gridSize={1}
-          onDragEnd={result => this.onDragDrop(result)}
-        />
         <h1 className="mt-4">Sortable (Layout)</h1>
         <hr />
         <Sortable
           id="items4"
           items={this.state.items4}
           renderItem={this.renderItemLayout}
+          gridSize={1}
+          onDragEnd={result => this.onDragDrop(result)}
+        />
+        <h1 className="mt-4">Sortable (Many items)</h1>
+        <hr />
+        <Sortable
+          id="items3"
+          items={this.state.items3}
+          renderItem={this.renderItem}
           gridSize={1}
           onDragEnd={result => this.onDragDrop(result)}
         />

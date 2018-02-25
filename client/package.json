@@ -7,18 +7,25 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "start":
-      "webpack-dev-server --port 8082 --history-api-fallback --host 0.0.0.0 --config ./webpack.config.js",
+    "start": "webpack-dev-server --port 8082 --history-api-fallback --host 0.0.0.0 --config ./webpack.config.js",
     "build": "webpack --config webpack.config.js -p",
     "test": "jest /src",
     "test-watch": "jest /src --watch"
   },
   "babel": {
-    "presets": ["env", "react", "stage-2"]
+    "presets": [
+      "env",
+      "react",
+      "stage-2"
+    ]
   },
   "jest": {
-    "setupFiles": ["./src/core/test/setup.js"],
-    "snapshotSerializers": ["enzyme-to-json/serializer"]
+    "setupFiles": [
+      "./src/core/test/setup.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
