@@ -55,12 +55,16 @@
     "webpack-dev-server": "^2.11.1"
   },
   "dependencies": {
+    "apollo-client-preset": "^1.0.8",
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0",
+    "graphql": "^0.13.1",
+    "graphql-tag": "^2.8.0",
     "history": "^4.7.2",
     "moment": "^2.20.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-apollo": "^2.0.4",
     "react-beautiful-dnd": "^5.0.0",
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
