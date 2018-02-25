@@ -8,7 +8,7 @@ import { schema } from './schema'
 const PORT = 4000
 const server = express()
 
-server.use('*', cors({ origin: 'http://localhost:3000' }))
+server.use('*', cors({ origin: 'http://localhost:8082' }))
 
 server.use(
   '/graphql',

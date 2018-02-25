@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 
 class Page extends Component {
   render() {
+    const { title, children } = this.props
     return (
       <div className="container page">
-        <h1>{this.props.title}</h1>
+        <h1>{title}</h1>
         <hr />
-        {this.props.children}
+        {children}
       </div>
     )
   }

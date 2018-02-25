@@ -1,25 +1,25 @@
 import React, { Component } from 'react'
-import { Route, Redirect } from 'react-router'
+import { Router, Route, Redirect, Switch } from 'react-router'
 import { ConnectedRouter } from 'react-router-redux'
 import { Provider } from 'react-redux'
 import { ApolloProvider } from 'react-apollo'
 import { store, history } from 'state'
 import client from 'state/apollo'
 import PrivateRoute from 'core/components/PrivateRoute'
-import Login from '../modules/Main/Login'
-import Main from '../modules/Main'
+import Main from './Main'
+import Todo from './Todo'
+import DragDrop from './DragDrop'
 
-class Routes extends Component {
+class App extends Component {
   render() {
     return (
       <Provider store={store}>
         <ApolloProvider client={client}>
           <ConnectedRouter history={history}>
-            <div>
-              <Route path="/login" component={Login} />
-              <Route exact path="/" component={Main} />
-              <Route exact path="/admin" component={Main} />
-            </div>
+            <Main>
+              <Route path="/todo" component={Todo} />
+              <Route path="/drop" component={DragDrop} />
+            </Main>
           </ConnectedRouter>
         </ApolloProvider>
       </Provider>
@@ -27,4 +27,4 @@ class Routes extends Component {
   }
 }
 
-export default Routes
+export default App
