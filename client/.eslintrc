@@ -13,7 +13,6 @@
     "consistent-return": "off",
     "comma-dangle": ["error", "never"],
     "class-methods-use-this": "off",
-    "import/no-extraneous-dependencies": "off",
     "no-param-reassign": "off"
   },
   "settings": {
