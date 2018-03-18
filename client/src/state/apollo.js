@@ -1,10 +1,16 @@
-import { ApolloClient, HttpLink, InMemoryCache } from 'apollo-client-preset'
+import { ApolloClient, HttpLink, InMemoryCache, ApolloLink } from 'apollo-client-preset'
+import { RestLink } from 'apollo-link-rest'
 
-const httpLink = new HttpLink({ uri: 'http://localhost:4000/graphql' })
+const cache = new InMemoryCache()
+
+const restLink = new RestLink({
+  uri: 'https://jsonplaceholder.typicode.com/'
+})
 
 const client = new ApolloClient({
-  link: httpLink,
-  cache: new InMemoryCache()
+  cache,
+  link: restLink
 })
+
 
 export default client

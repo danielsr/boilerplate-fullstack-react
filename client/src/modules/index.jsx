@@ -9,6 +9,7 @@ import PrivateRoute from 'core/components/PrivateRoute'
 import Main from './Main'
 import Todo from './Todo'
 import DragDrop from './DragDrop'
+import Posts from './Posts'
 
 class App extends Component {
   render() {
@@ -19,6 +20,7 @@ class App extends Component {
             <Main>
               <Route path="/todo" component={Todo} />
               <Route path="/drop" component={DragDrop} />
+              <Route path="/posts" component={Posts} />
             </Main>
           </ConnectedRouter>
         </ApolloProvider>
